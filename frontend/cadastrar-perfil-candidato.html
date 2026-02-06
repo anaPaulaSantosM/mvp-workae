@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Perfil - Workae</title>
+    <link rel="stylesheet" href="cadastrar-perfil-candidato.css">
+    <link rel="icon" type="image/png" href="../public/img/favicon_2.png">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <img src="../public/img/logo-branco_2.png" alt="Workae Logo" class="logo">
+            <h3>Meu perfil</h3>
+            <form id="cadastroForm" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="foto">Foto</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" id="idade" name="idade" required>
+                </div>
+                <div class="input-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" name="cidade" required>
+                </div>
+                <div class="input-group">
+                    <label for="estado">Estado</label>
+                    <input type="text" id="estado" name="estado" required>
+                </div>
+                <div class="input-group">
+                    <label for="formacao">Formação</label>
+                    <input type="text" id="formacao" name="formacao" required>
+                </div>
+                <div class="input-group">
+                    <label for="idiomas">Idiomas</label>
+                    <select id="idiomas" name="idiomas" multiple>
+                        <option>Inglês</option>
+                        <option>Espanhol</option>
+                        <option>Português</option>
+                        <option>Francês</option>
+                        <option>Alemão</option>
+                        <option>Italiano</option>
+                        <option>Chinês Mandarim</option>
+                        <option>Japonês</option>
+                        <option>Russo</option>
+                        <option>Outro</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="input-group">
+                    <label for="cursos-extras">Cursos Extras</label>
+                    <textarea id="cursos-extras" name="cursos-extras"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="projetos">Projetos</label>
+                    <textarea id="projetos" name="projetos"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="hobbies">Hobbies</label>
+                    <textarea id="hobbies" name="hobbies"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="erro-aprendizado">Conte sobre um erro que te ensinou algo importante</label>
+                    <textarea id="erro-aprendizado" name="erro-aprendizado"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="nao-sabe">O que você faz quando não sabe a resposta?</label>
+                    <textarea id="nao-sabe" name="nao-sabe"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="superacao">Uma situação difícil que você superou</label>
+                    <textarea id="superacao" name="superacao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="inspiracao">Uma pessoa, filme, história ou projeto que te inspira e porque</label>
+                    <textarea id="inspiracao" name="inspiracao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="motivacao">Uma frase que te motiva</label>
+                    <textarea id="motivacao" name="motivacao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="musica">Uma música que embala teus sonhos</label>
+                    <textarea id="musica" name="musica"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="lugar">Se você pudesse conhecer qualquer lugar do mundo, qual seria?</label>
+                    <textarea id="lugar" name="lugar"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="porque-contratar">Porque os recrutadores devem fazer contato com você na plataforma?</label>
+                    <textarea id="porque-contratar" name="porque-contratar"></textarea>
+                </div>
+                <!--
+                <div class="input-group">
+                    <label for="data-contratacao">Data da contratação</label>
+                    <input type="date" id="data-contratacao" name="data-contratacao" disabled>
+                </div>
+                -->
+                <button type="submit" class="btn">Salvar</button>
+            </form>
+             <div class="links">
+                <a href="#">Visualizar perfil</a>
+                <a href="#">Sair</a>
+            </div>
+        </div>
+    </div>
+    <script src="cadastrar-perfil-candidato.js"></script>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil - Workae</title>
+    <link rel="stylesheet" href="cadastrar-perfil-candidato.css">
+    <link rel="icon" type="image/png" href="/img/favicon_2.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <img src="/img/logo-branco_2.png" alt="Workae Logo" class="logo">
+            <h3>Editar perfil</h3>
+            <form id="editarPerfilForm" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="foto">Foto</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                </div>
+                <div class="input-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="idade">Idade</label>
+                    <select id="idade" name="idade" required style="width:100%"></select>
+                </div>
+                <div class="input-group">
+                    <label for="estado">Estado</label>
+                    <select id="estado" name="estado" required style="width:100%">
+                        <option value="">Selecione o estado...</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="cidade">Cidade</label>
+                    <select id="cidade" name="cidade" required style="width:100%">
+                        <option value="">Selecione o estado primeiro...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="formacao">Formação</label>
+                    <select id="formacao" name="formacao" required style="width:100%">
+                        <option value="">Selecione...</option>
+                        <option>Administração</option>
+                        <option>Administração Pública</option>
+                        <option>Agroecologia</option>
+                        <option>Agronegócio</option>
+                        <option>Agronomia</option>
+                        <option>Análise de Sistemas</option>
+                        <option>Antropologia</option>
+                        <option>Arquitetura e Urbanismo</option>
+                        <option>Arquivologia</option>
+                        <option>Artes</option>
+                        <option>Artes Cênicas</option>
+                        <option>Astronomia</option>
+                        <option>Biblioteconomia</option>
+                        <option>Biologia</option>
+                        <option>Biomedicina</option>
+                        <option>Bioquímica</option>
+                        <option>Canto</option>
+                        <option>Cenografia</option>
+                        <option>Ciência da Computação</option>
+                        <option>Ciências Biológicas</option>
+                        <option>Ciências Contábeis</option>
+                        <option>Ciências Econômicas</option>
+                        <option>Ciências Sociais</option>
+                        <option>Cinema e Audiovisual</option>
+                        <option>Computação</option>
+                        <option>Comunicação e Marketing</option>
+                        <option>Comunicação Social</option>
+                        <option>Desenho Industrial</option>
+                        <option>Design</option>
+                        <option>Design de Ambientes</option>
+                        <option>Design de Games</option>
+                        <option>Design de Interiores</option>
+                        <option>Design de Moda</option>
+                        <option>Design de Produto</option>
+                        <option>Design Digital</option>
+                        <option>Design Gráfico</option>
+                        <option>Direção</option>
+                        <option>Direito</option>
+                        <option>Educação Física</option>
+                        <option>Enfermagem</option>
+                        <option>Engenharia Acústica</option>
+                        <option>Engenharia Aeroespacial</option>
+                        <option>Engenharia Aeronáutica</option>
+                        <option>Engenharia Agrícola</option>
+                        <option>Engenharia Agroindustrial</option>
+                        <option>Engenharia Agronômica</option>
+                        <option>Engenharia Ambiental</option>
+                        <option>Engenharia Automotiva</option>
+                        <option>Engenharia Bioenergética</option>
+                        <option>Engenharia Biomédica</option>
+                        <option>Engenharia Bioquímica</option>
+                        <option>Engenharia Biotecnológica</option>
+                        <option>Engenharia Cartográfica</option>
+                        <option>Engenharia Civil</option>
+                        <option>Engenharia da Computação</option>
+                        <option>Engenharia da Mobilidade</option>
+                        <option>Engenharia de Agrimensura</option>
+                        <option>Engenharia de Agronegócios</option>
+                        <option>Engenharia de Alimentos</option>
+                        <option>Engenharia de Aquicultura</option>
+                        <option>Engenharia de Automação</option>
+                        <option>Engenharia de Bioprocessos</option>
+                        <option>Engenharia de Biossistemas</option>
+                        <option>Engenharia de Biotecnologia</option>
+                        <option>Engenharia de Energia</option>
+                        <option>Engenharia de Gestão</option>
+                        <option>Engenharia de Informação</option>
+                        <option>Engenharia de Instrumentação, Automação e Robótica</option>
+                        <option>Engenharia de Manufatura</option>
+                        <option>Engenharia de Materiais</option>
+                        <option>Engenharia de Minas</option>
+                        <option>Engenharia de Pesca</option>
+                        <option>Engenharia de Petróleo</option>
+                        <option>Engenharia de Produção</option>
+                        <option>Engenharia de Recursos Hídricos</option>
+                        <option>Engenharia de Saúde e Segurança</option>
+                        <option>Engenharia de Sistemas</option>
+                        <option>Engenharia de Software</option>
+                        <option>Engenharia de Telecomunicações</option>
+                        <option>Engenharia de Transporte e Logística</option>
+                        <option>Engenharia Elétrica</option>
+                        <option>Engenharia Eletrônica</option>
+                        <option>Engenharia em Sistemas Digitais</option>
+                        <option>Engenharia Ferroviária e Metroviária</option>
+                        <option>Engenharia Física</option>
+                        <option>Engenharia Florestal</option>
+                        <option>Engenharia Geológica</option>
+                        <option>Engenharia Hídrica</option>
+                        <option>Engenharia Industrial</option>
+                        <option>Engenharia Mecânica</option>
+                        <option>Engenharia Mecatrônica</option>
+                        <option>Engenharia Metalúrgica</option>
+                        <option>Engenharia Naval</option>
+                        <option>Engenharia Química</option>
+                        <option>Engenharia Têxtil</option>
+                        <option>Estatística</option>
+                        <option>Farmácia</option>
+                        <option>Filosofia</option>
+                        <option>Física</option>
+                        <option>Fisioterapia</option>
+                        <option>Fonoaudiologia</option>
+                        <option>Geografia</option>
+                        <option>Gestão Ambiental</option>
+                        <option>Gestão da Informação</option>
+                        <option>Gestão de Políticas Públicas</option>
+                        <option>Gestão de Serviços de Saúde</option>
+                        <option>Gestão do Agronegócio</option>
+                        <option>Gestão Pública</option>
+                        <option>História</option>
+                        <option>Hotelaria</option>
+                        <option>Jornalismo</option>
+                        <option>Letras</option>
+                        <option>Marketing</option>
+                        <option>Matemática</option>
+                        <option>Mecânica Industrial</option>
+                        <option>Medicina</option>
+                        <option>Medicina Veterinária</option>
+                        <option>Moda</option>
+                        <option>Música</option>
+                        <option>Nutrição</option>
+                        <option>Odontologia</option>
+                        <option>Pedagogia</option>
+                        <option>Políticas Públicas</option>
+                        <option>Propaganda e Marketing</option>
+                        <option>Psicologia</option>
+                        <option>Publicidade e Propaganda</option>
+                        <option>Química</option>
+                        <option>Rádio, TV e Internet</option>
+                        <option>Relações Internacionais</option>
+                        <option>Relações Públicas</option>
+                        <option>Secretariado Executivo</option>
+                        <option>Serviço Social</option>
+                        <option>Sistemas de Informação</option>
+                        <option>Tecnologias Digitais</option>
+                        <option>Teologia</option>
+                        <option>Terapia Ocupacional</option>
+                        <option>Tradutor e Intérprete</option>
+                        <option>Turismo</option>
+                        <option>Zootecnia</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="idiomas">Idiomas</label>
+                    <select id="idiomas" name="idiomas" required style="width:100%" multiple>
+                        <option value="">Selecione...</option>
+                        <option>Inglês</option>
+                        <option>Chinês Mandarim</option>
+                        <option>Hindi</option>
+                        <option>Espanhol</option>
+                        <option>Francês</option>
+                        <option>Árabe</option>
+                        <option>Bengali</option>
+                        <option>Russo</option>
+                        <option>Português</option>
+                        <option>Urdu</option>
+                        <option>Indonésio</option>
+                        <option>Alemão</option>
+                        <option>Japonês</option>
+                        <option>Marata</option>
+                        <option>Telugu</option>
+                        <option>Turco</option>
+                        <option>Tâmil</option>
+                        <option>Vietnamita</option>
+                        <option>Italiano</option>
+                        <option>Tailandês</option>
+                        <option>Gujarati</option>
+                        <option>Persa (Farsi)</option>
+                        <option>Polonês</option>
+                        <option>Canarim</option>
+                        <option>Ucraniano</option>
+                        <option>Malayalam</option>
+                        <option>Oriá</option>
+                        <option>Birmanês</option>
+                        <option>Punjabi</option>
+                        <option>Romeno</option>
+                        <option>Hauçá</option>
+                        <option>Sundanês</option>
+                        <option>Árabe Egípcio</option>
+                        <option>Coreano</option>
+                        <option>Iorubá</option>
+                        <option>Maithili</option>
+                        <option>Birmanês</option>
+                        <option>Tagalo (Filipino)</option>
+                        <option>Uzbeque</option>
+                        <option>Sindhi</option>
+                        <option>Amárico</option>
+                        <option>Fula</option>
+                        <option>Igbo</option>
+                        <option>Oromo</option>
+                        <option>Ganês (Akan)</option>
+                        <option>Khmer</option>
+                        <option>Assamês</option>
+                        <option>Madurês</option>
+                        <option>Saraiki</option>
+                        <option>Nepalês</option>
+                        <option>Sinhalês</option>
+                        <option>Chittagonian</option>
+                        <option>Zhuang</option>
+                        <option>Khmer Central</option>
+                        <option>Somali</option>
+                        <option>Caxemira</option>
+                        <option>Hebraico</option>
+                        <option>Húngaro</option>
+                        <option>Grego</option>
+                        <option>Checo</option>
+                        <option>Sueco</option>
+                        <option>Holandês</option>
+                        <option>Finlandês</option>
+                        <option>Norueguês</option>
+                        <option>Dinamarquês</option>
+                        <option>Búlgaro</option>
+                        <option>Sérvio</option>
+                        <option>Romeno</option>
+                        <option>Eslovaco</option>
+                        <option>Croata</option>
+                        <option>Lituano</option>
+                        <option>Esloveno</option>
+                        <option>Letão</option>
+                        <option>Estoniano</option>
+                        <option>Islandês</option>
+                        <option>Macedônio</option>
+                        <option>Albanês</option>
+                        <option>Bósnio</option>
+                        <option>Georgiano</option>
+                        <option>Armênio</option>
+                        <option>Azerbaijano</option>
+                        <option>Quirguiz</option>
+                        <option>Tadjique</option>
+                        <option>Turcomeno</option>
+                        <option>Kazaque</option>
+                        <option>Mongol</option>
+                        <option>Laosiano</option>
+                        <option>Cambojano</option>
+                        <option>Luxemburguês</option>
+                        <option>Maltês</option>
+                        <option>Irlandês</option>
+                        <option>Gaélico Escocês</option>
+                        <option>Galês</option>
+                        <option>Bretão</option>
+                        <option>Catalão</option>
+                        <option>Basco</option>
+                        <option>Frísio</option>
+                        <option>Córsico</option>
+                        <option>Sardo</option>
+                        <option>Feroês</option>
+                        <option>Groenlandês</option>
+                        <option>Manês</option>
+                        <option>Galego</option>
+                        <option>Mirandês</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" required>
+                </div>
+                <div class="input-group">
+                    <label for="cursos-extras">Cursos Extras</label>
+                    <textarea id="cursos-extras" name="cursos-extras"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="projetos">Projetos</label>
+                    <textarea id="projetos" name="projetos"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="hobbies">Hobbies</label>
+                    <textarea id="hobbies" name="hobbies"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="erro-aprendizado">Conte sobre um erro que te ensinou algo importante</label>
+                    <textarea id="erro-aprendizado" name="erro-aprendizado"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="nao-sabe">O que você faz quando não sabe a resposta?</label>
+                    <textarea id="nao-sabe" name="nao-sabe"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="superacao">Uma situação difícil que você superou</label>
+                    <textarea id="superacao" name="superacao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="inspiracao">Uma pessoa, filme, história ou projeto que te inspira e porque</label>
+                    <textarea id="inspiracao" name="inspiracao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="motivacao">Uma frase que te motiva</label>
+                    <textarea id="motivacao" name="motivacao"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="musica">Uma música que embala teus sonhos</label>
+                    <textarea id="musica" name="musica"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="lugar">Se você pudesse conhecer qualquer lugar do mundo, qual seria?</label>
+                    <textarea id="lugar" name="lugar"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="porque-contratar">Porque os recrutadores devem fazer contato com você na
+                        plataforma?</label>
+                    <textarea id="porque-contratar" name="porque-contratar"></textarea>
+                </div>
+                <!--
+                <div class="input-group">
+                    <label for="data-contratacao">Data da contratação</label>
+                    <input type="date" id="data-contratacao" name="data-contratacao" disabled>
+                </div>
+                -->
+                <button type="submit" class="btn">Salvar</button>
+            </form>
+            <div class="links">
+                <a href="#" onclick="cancelarEdicao()">Cancelar</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Preencher o select de idade de 1 a 100
+        function popularIdades(idadeSelecionada) {
+            const idadeSelect = document.getElementById('idade');
+            idadeSelect.innerHTML = '<option value="">Selecione...</option>';
+            for (let i = 1; i <= 100; i++) {
+                const opt = document.createElement('option');
+                opt.value = i;
+                opt.textContent = i;
+                if (idadeSelecionada && parseInt(idadeSelecionada) === i) opt.selected = true;
+                idadeSelect.appendChild(opt);
+            }
+        }
+        // Listas de cidades por estado (exemplo reduzido, pode ser expandido)
+        const cidadesPorEstado = {
+            AC: ["Rio Branco", "Cruzeiro do Sul", "Sena Madureira"],
+            AL: ["Maceió", "Arapiraca", "Palmeira dos Índios"],
+            AP: ["Macapá", "Santana", "Laranjal do Jari"],
+            AM: ["Manaus", "Parintins", "Itacoatiara"],
+            BA: ["Salvador", "Feira de Santana", "Vitória da Conquista"],
+            CE: ["Fortaleza", "Caucaia", "Juazeiro do Norte"],
+            DF: ["Brasília"],
+            ES: ["Vitória", "Vila Velha", "Serra"],
+            GO: ["Goiânia", "Aparecida de Goiânia", "Anápolis"],
+            MA: ["São Luís", "Imperatriz", "Timon"],
+            MT: ["Cuiabá", "Várzea Grande", "Rondonópolis"],
+            MS: ["Campo Grande", "Dourados", "Três Lagoas"],
+            MG: ["Belo Horizonte", "Uberlândia", "Contagem"],
+            PA: ["Belém", "Ananindeua", "Santarém"],
+            PB: ["João Pessoa", "Campina Grande", "Santa Rita"],
+            PR: ["Curitiba", "Londrina", "Maringá"],
+            PE: ["Recife", "Jaboatão dos Guararapes", "Olinda"],
+            PI: ["Teresina", "Parnaíba", "Picos"],
+            RJ: ["Rio de Janeiro", "São Gonçalo", "Duque de Caxias"],
+            RN: ["Natal", "Mossoró", "Parnamirim"],
+            RS: ["Porto Alegre", "Caxias do Sul", "Pelotas"],
+            RO: ["Porto Velho", "Ji-Paraná", "Ariquemes"],
+            RR: ["Boa Vista"],
+            SC: ["Florianópolis", "Joinville", "Blumenau"],
+            SP: ["São Paulo", "Guarulhos", "Campinas"],
+            SE: ["Aracaju", "Nossa Senhora do Socorro", "Lagarto"],
+            TO: ["Palmas", "Araguaína", "Gurupi"]
+        };
+
+        function popularCidades(estado, cidadeSelecionada) {
+            const cidadeSelect = document.getElementById('cidade');
+            cidadeSelect.innerHTML = '<option value="">Selecione a cidade...</option>';
+            if (estado && cidadesPorEstado[estado]) {
+                cidadesPorEstado[estado].forEach(cidade => {
+                    const opt = document.createElement('option');
+                    opt.value = cidade;
+                    opt.textContent = cidade;
+                    if (cidadeSelecionada && cidadeSelecionada === cidade) opt.selected = true;
+                    cidadeSelect.appendChild(opt);
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            popularIdades();
+            const userId = localStorage.getItem('user_id');
+            if (!userId) {
+                window.location.href = 'login.html';
+                return;
+            }
+            try {
+                const res = await fetch(`http://localhost:3334/api/users/perfil/${userId}`);
+                if (res.ok) {
+                    const perfil = await res.json();
+                    document.getElementById('nome').value = perfil.nome || '';
+                    popularIdades(perfil.idade);
+                    document.getElementById('estado').value = perfil.estado || '';
+                    popularCidades(perfil.estado, perfil.cidade);
+                    document.getElementById('formacao').value = perfil.formacao || '';
+                    if (perfil.idiomas) {
+                        const idiomasArray = Array.isArray(perfil.idiomas) ? perfil.idiomas : perfil.idiomas.split(',').map(i => i.trim());
+                        Array.from(document.getElementById('idiomas').options).forEach(opt => {
+                            opt.selected = idiomasArray.includes(opt.value);
+                        });
+                    } else {
+                        Array.from(document.getElementById('idiomas').options).forEach(opt => { opt.selected = false; });
+                    }
+                    document.getElementById('telefone').value = perfil.telefone || '';
+                    document.getElementById('cursos-extras').value = perfil['cursos-extras'] || '';
+                    document.getElementById('projetos').value = perfil.projetos || '';
+                    document.getElementById('hobbies').value = perfil.hobbies || '';
+                    document.getElementById('erro-aprendizado').value = perfil['erro-aprendizado'] || '';
+                    document.getElementById('nao-sabe').value = perfil['nao-sabe'] || '';
+                    document.getElementById('superacao').value = perfil.superacao || '';
+                    document.getElementById('inspiracao').value = perfil.inspiracao || '';
+                    document.getElementById('motivacao').value = perfil.motivacao || '';
+                    document.getElementById('musica').value = perfil.musica || '';
+                    document.getElementById('lugar').value = perfil.lugar || '';
+                    document.getElementById('porque-contratar').value = perfil['porque-contratar'] || '';
+                    //document.getElementById('data-contratacao').value = perfil['data-contratacao'] || '';
+                }
+            } catch (err) {
+                alert('Erro ao carregar dados do perfil.');
+            }
+        });
+
+        document.getElementById('estado').addEventListener('change', function () {
+            popularCidades(this.value);
+        });
+        // Enviar atualização do perfil
+        document.getElementById('editarPerfilForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const userId = localStorage.getItem('user_id');
+            const dados = {
+                user_id: userId,
+                nome: document.getElementById('nome').value,
+                idade: document.getElementById('idade').value,
+                cidade: document.getElementById('cidade').value,
+                estado: document.getElementById('estado').value,
+                formacao: document.getElementById('formacao').value,
+                idiomas: Array.from(document.getElementById('idiomas').selectedOptions).map(opt => opt.value).join(','),
+                telefone: document.getElementById('telefone').value,
+                'cursos-extras': document.getElementById('cursos-extras').value,
+                projetos: document.getElementById('projetos').value,
+                hobbies: document.getElementById('hobbies').value,
+                'erro-aprendizado': document.getElementById('erro-aprendizado').value,
+                'nao-sabe': document.getElementById('nao-sabe').value,
+                superacao: document.getElementById('superacao').value,
+                inspiracao: document.getElementById('inspiracao').value,
+                motivacao: document.getElementById('motivacao').value,
+                musica: document.getElementById('musica').value,
+                lugar: document.getElementById('lugar').value,
+                'porque-contratar': document.getElementById('porque-contratar').value,
+                //'data-contratacao': document.getElementById('data-contratacao').value
+            };
+            try {
+                idade: document.getElementById('idade').value;
+                cidade: document.getElementById('cidade').value;
+                estado: document.getElementById('estado').value
+                // Adicione outros campos conforme necessário
+            } catch (err) {
+                alert('Erro ao coletar dados do formulário.');
+                return;
+            }
+            try {
+                const form = document.getElementById('editarPerfilForm');
+                const formData = new FormData(form);
+
+                formData.append('user_id', localStorage.getItem('user_id'));
+
+                const res = await fetch('http://localhost:3334/api/users/cadastrar-perfil-candidato', {
+                    method: 'POST',
+                    body: formData 
+                });
+
+                if (res.ok) {
+                    window.location.href = 'visualizar-perfil-candidato.html';
+                } else {
+                    alert('Erro ao salvar perfil.');
+                }
+            } catch (err) {
+                alert('Erro ao conectar com o servidor.');
+            }
+        });
+        function cancelarEdicao() {
+            window.location.href = 'visualizar-perfil-candidato.html';
+        }
+    </script>
+</body>
+
+</html>

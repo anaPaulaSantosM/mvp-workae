@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Perfil - Workae</title>
+    <link rel="stylesheet" href="cadastrar-perfil-candidato.css">
+    <style>
+        .foto-perfil-redonda {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            /* 👈 AQUI */
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+    <link rel="icon" type="image/png" href="/img/favicon_2.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <img src="/img/logo-branco_2.png" alt="Workae Logo" class="logo">
+            <!--<h3>Meu perfil</h3>-->
+            <div id="perfil-info">
+                <!-- Informações do perfil serão exibidas aqui via JS -->
+            </div>
+            <div class="links">
+                <a href="#" onclick="editarCadastro()">Editar cadastro</a>
+                <a href="#" onclick="sair()">Sair</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const userId = localStorage.getItem('user_id');
+            if (!userId) {
+                window.location.href = 'login.html';
+                return;
+            }
+            try {
+                const res = await fetch(`http://localhost:3334/api/users/perfil/${userId}`);
+                const perfil = await res.json();
+                document.getElementById('perfil-info').innerHTML = `
+                        <img src="${perfil.foto ? '/img/fotos/' + perfil.foto + '?v=' + Date.now() : '/img/default-user.png'}" alt="Foto de ${perfil.nome || ''}" class="foto-perfil-redonda">
+                        <div class="input-group"><label>Nome</label><div>${perfil.nome || ''}</div></div>
+                        <div class="input-group"><label>Email</label><div>${perfil.email || ''}</div></div>
+                        <div class="input-group"><label>Idade</label><div>${perfil.idade || ''}</div></div>
+                        <div class="input-group"><label>Cidade</label><div>${perfil.cidade || ''}</div></div>
+                        <div class="input-group"><label>Estado</label><div>${perfil.estado || ''}</div></div>
+                        <div class="input-group"><label>Formação</label><div>${perfil.formacao || ''}</div></div>
+                        <div class="input-group"><label>Idiomas</label><div>${perfil.idiomas || ''}</div></div>
+                        <div class="input-group"><label>Telefone</label><div>${perfil.telefone || ''}</div></div>
+                        <div class="input-group"><label>Cursos Extras</label><div>${perfil['cursos-extras'] || ''}</div></div>
+                        <div class="input-group"><label>Projetos</label><div>${perfil.projetos || ''}</div></div>
+                        <div class="input-group"><label>Hobbies</label><div>${perfil.hobbies || ''}</div></div>
+                        <div class="input-group"><label>Erro que ensinou algo</label><div>${perfil['erro-aprendizado'] || ''}</div></div>
+                        <div class="input-group"><label>O que faz quando não sabe</label><div>${perfil['nao-sabe'] || ''}</div></div>
+                        <div class="input-group"><label>Situação difícil superada</label><div>${perfil.superacao || ''}</div></div>
+                        <div class="input-group"><label>Inspiração</label><div>${perfil.inspiracao || ''}</div></div>
+                        <div class="input-group"><label>Frase que motiva</label><div>${perfil.motivacao || ''}</div></div>
+                        <div class="input-group"><label>Música dos sonhos</label><div>${perfil.musica || ''}</div></div>
+                        <div class="input-group"><label>Lugar dos sonhos</label><div>${perfil.lugar || ''}</div></div>
+                        <div class="input-group"><label>Por que contratar</label><div>${perfil['porque-contratar'] || ''}</div></div>
+                        <!--<div class="input-group"><label>Data da contratação</label><div>${perfil['data-contratacao'] || ''}</div></div> -->
+                    `;
+            } catch (err) {
+                document.getElementById('perfil-info').innerHTML = '<p>Erro ao carregar perfil.</p>';
+            }
+        });
+        function editarCadastro() {
+            window.location.href = 'editar-perfil-candidato.html';
+        }
+        function sair() {
+            localStorage.clear();
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>
