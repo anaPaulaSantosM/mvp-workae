@@ -1,5 +1,6 @@
 // URL base do backend para Vercel (API serverless)
-const API_URL = 'http://localhost:3334/api/users';
+//const API_URL = 'http://localhost:3334/api/users';
+const API_URL = '/api/users';
 
 document.getElementById('loginForm').addEventListener('submit', async function (e) {
 	e.preventDefault();
