@@ -449,7 +449,8 @@
                 return;
             }
             try {
-                const res = await fetch(`http://localhost:3334/api/users/perfil/${userId}`);
+                //const res = await fetch(`http://localhost:3334/api/users/perfil/${userId}`);
+                const res = await fetch(`/api/users/perfil/${userId}`);
                 if (res.ok) {
                     const perfil = await res.json();
                     document.getElementById('nome').value = perfil.nome || '';
@@ -528,7 +529,8 @@
 
                 formData.append('user_id', localStorage.getItem('user_id'));
 
-                const res = await fetch('http://localhost:3334/api/users/cadastrar-perfil-candidato', {
+                //const res = await fetch('http://localhost:3334/api/users/cadastrar-perfil-candidato', {
+                const res = await fetch('/api/users/cadastrar-perfil-candidato', {
                     method: 'POST',
                     body: formData 
                 });

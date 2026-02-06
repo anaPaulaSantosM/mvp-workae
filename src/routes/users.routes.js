@@ -162,7 +162,8 @@ router.post('/forgot-password', async (req, res) => {
             { expiresIn: '1h' }
         );
 
-        const resetLink = `http://localhost:3334/reset-password.html?token=${resetToken}`;
+        //const resetLink = `http://localhost:3334/reset-password.html?token=${resetToken}`;
+        const resetLink = `/api/reset-password.html?token=${resetToken}`;
 
         console.log('Preparando envio de e-mail');
         console.log('SMTP USER:', process.env.EMAIL);

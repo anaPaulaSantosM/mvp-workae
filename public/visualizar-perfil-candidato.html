@@ -44,7 +44,8 @@
                 return;
             }
             try {
-                const res = await fetch(`http://localhost:3334/api/users/perfil/${userId}`);
+                //const res = await fetch(`http://localhost:3334/api/users/perfil/${userId}`);
+                const res = await fetch(`/api/users/perfil/${userId}`);
                 const perfil = await res.json();
                 document.getElementById('perfil-info').innerHTML = `
                         <img src="${perfil.foto ? '/img/fotos/' + perfil.foto + '?v=' + Date.now() : '/img/default-user.png'}" alt="Foto de ${perfil.nome || ''}" class="foto-perfil-redonda">
