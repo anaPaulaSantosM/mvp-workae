@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="cadastrar-perfil-candidato.css">
     <link rel="icon" type="image/png" href="../public/img/favicon_2.png">
 </head>
+
 <body>
     <div class="container">
         <div class="form-box">
@@ -39,10 +41,10 @@
                 </div>
                 <div class="input-group">
                     <label for="formacao">Formação</label>
-                    <input list="formacoes" id="formacao" name="formacao" required autocomplete="off">
-                    <datalist id="formacoes">
-                        <!-- opções serão preenchidas via JS -->
-                    </datalist>
+                    <input type="text" name="formacao" id="formacao" list="formacoes"
+                        placeholder="Digite sua formação" />
+                    <datalist id="formacoes"></datalist>
+                    <!-- opções serão preenchidas via JS -->
                 </div>
                 <div class="input-group">
                     <label for="idiomas">Idiomas</label>
@@ -104,7 +106,8 @@
                     <textarea id="lugar" name="lugar"></textarea>
                 </div>
                 <div class="input-group">
-                    <label for="porque-contratar">Porque os recrutadores devem fazer contato com você na plataforma?</label>
+                    <label for="porque-contratar">Porque os recrutadores devem fazer contato com você na
+                        plataforma?</label>
                     <textarea id="porque-contratar" name="porque-contratar"></textarea>
                 </div>
                 <!--
@@ -115,7 +118,7 @@
                 -->
                 <button type="submit" class="btn">Salvar</button>
             </form>
-             <div class="links">
+            <div class="links">
                 <!--<a href="#">Visualizar perfil</a>-->
                 <a href="index.html">Sair</a>
             </div>
@@ -123,4 +126,5 @@
     </div>
     <script src="cadastrar-perfil-candidato.js"></script>
 </body>
+
 </html>
