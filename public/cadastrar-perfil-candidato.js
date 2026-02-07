@@ -37,6 +37,26 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
     }
 });
 
+const datalistFormacoes = document.getElementById('formacoes');
+
+if (datalistFormacoes) {
+    try {
+        const res = await fetch('/data/formacoes.json');
+        const formacoes = await res.json();
+
+        formacoes
+            .sort((a, b) => a.localeCompare(b, 'pt-BR'))
+            .forEach(formacao => {
+                const option = document.createElement('option');
+                option.value = formacao;
+                datalistFormacoes.appendChild(option);
+            });
+
+    } catch (err) {
+        console.error('Erro ao carregar lista de formações', err);
+    }
+}
+
 // Preencher estados ao carregar a página
 document.addEventListener('DOMContentLoaded', async function () {
     const estadoSelect = document.getElementById('estado');

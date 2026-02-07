@@ -39,7 +39,10 @@
                 </div>
                 <div class="input-group">
                     <label for="formacao">Formação</label>
-                    <input type="text" id="formacao" name="formacao" required>
+                    <input list="formacoes" id="formacao" name="formacao" required autocomplete="off">
+                    <datalist id="formacoes">
+                        <!-- opções serão preenchidas via JS -->
+                    </datalist>
                 </div>
                 <div class="input-group">
                     <label for="idiomas">Idiomas</label>
